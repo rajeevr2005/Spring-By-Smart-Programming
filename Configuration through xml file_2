@@ -1,0 +1,81 @@
+//Student.java  file
+
+package in.sp.beans;
+
+public class Student {
+	
+	private String name;
+	private int rollno;
+	private String email;
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getRollno() {
+		return rollno;
+	}
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public void display() {
+		System.out.println("Name is "+name);
+		System.out.println("Roll No. is "+rollno);
+		System.out.println("email is "+email);
+	}
+		
+}
+
+
+------------------------------
+//ApplicationContext.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="in.sp.beans.Student" id="stdId">
+
+<property name="name" value="Rajeev" />
+<property name="rollno" value="101" />
+<property name="email" value="rajeev@gmail.com" />	
+</bean>
+
+</beans>
+
+
+-----------------------------
+
+//Main.java
+
+package in.sp.beans;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		String config_loc="in/sp/resources/applicationContext.xml";
+		ApplicationContext context=new ClassPathXmlApplicationContext(config_loc);
+		
+		
+		Student std=(Student) context.getBean("stdId");
+		
+		std.display();
+	
+	}
+
+}
