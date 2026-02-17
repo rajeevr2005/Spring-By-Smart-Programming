@@ -1,0 +1,24 @@
+//Dependencies Injection:- 
+	It is a design pattern used in the spring framework to achieve Inversion of control(IoC)
+	Its main task is to inject the dependency means inject one object into another object.
+	It is used to achieve loose coupling(loose coupling ka matlab hai ki hmara ek object dusre object ke upper depend hai to mai usko directly inject na karu, mai usko configuration 	file ke through ek object ko dusre object ke ander inject karu).
+	we can achieve dependencies inject by two method 1. setter method  2. constructor method
+
+//Hard coding in java means directly putting specific values(i.e. numbers or strings in your code rather than using variables or external configurations)
+This can make your code less adaptable and more challenging to change later.
+Example:-
+
+pubic class Calculator{
+public int add(){
+	int result=5+3;
+	return result;
+	}
+}
+
+//Tightly coupled  //Loosely coupling
+
+//Dependency injection is the process by which we can inject one bean object into another bean object.
+
+----------------------------------------------------------------------------------------------------------
+
+//Dependencies injection by setter method
