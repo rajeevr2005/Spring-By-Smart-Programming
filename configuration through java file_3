@@ -1,0 +1,53 @@
+Step 1. click on File and create new java project
+Step 2. add build path of jar file on click on project name
+Step 3. click on src and click new and then click on class,   package=in.sp.beans  and name=Student and then finish
+
+//Student.java file
+
+package in.sp.beans;
+
+public class Student {
+	private String name;
+	private int rollno;
+	private String email;
+
+}
+
+step4. on right click, click on source, then source->click on getter and setter
+
+
+package in.sp.beans;
+
+public class Student {
+	private String name;
+	private int rollno;
+	private String email;
+	
+	public String getname() {
+		return name;
+	}
+	
+	public void setname(String name) {
+		this.name=name;
+	}
+	
+	public int getrollno() {
+		return rollno;
+	}
+	
+	public void setrollno(int rollno) {
+		this.rollno=rollno;
+	}
+	
+	public String getemail() {
+		return email;
+	}
+	
+	public void setemail(String email) {
+		this.email=email;
+	}
+
+}
+
+
+//step 5. click on src and then New -> class    Name=SpringConfigfile   enter
