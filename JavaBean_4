@@ -1,0 +1,27 @@
+//A JavaBean is a java class that follows the following conventions:-
+1. It should have private property.
+2. It should provide public getter and setter methods to get and set the values in properties.
+3. It should have public no-arg constructor or default constructor.
+
+
+//A JavaBean object is an instance of java class. It is reusable, encapsulated java component with properties,getters and setters, designed for easy integration and manipulation.
+
+
+//Bean Life cycle
+
+1. Loading Bean definition:- 
+Spring loads bean definition from various sources, such as xml configuration file, jav-based configuration classes or component scanning. These bean definition 			   contain information about the bean class, dependencies and other configuration details. 
+
+2. Bean instantiation(means bean object create):- 
+After bean definition are loaded, the spring container creates instances of beans based on these definitions. This involves invoking the bean class's constructor, either the default constructor or a specified constructor, to create an actual instance of the bean. The newly created bean instance is now ready for configuration and initialization. 
+
+3. Bean initialisation:-
+Once upon the bean is instantiated, spring proceeds to configure and initialize it. Property values are set using setters, constructor arguments, or field injection, populating the bean's state. 
+
+
+4. Use bean object:- context.getBean   ke through
+
+5. Bean destruction:- in this phase, Bean object is destroyed or deleted.  stdId will deleted
+
+
+//BeanPostProcessor:- A "BeanPostProcessor" in spring is an interface that enables custom logic to be executed before and after the initialisation of spring beans.   It is come before and after Bean initialization.
